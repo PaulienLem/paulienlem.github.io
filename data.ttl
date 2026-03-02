@@ -1,0 +1,10 @@
+@prefix vocab: <https://paulienlem.github.io/course-knowledge-graphs/vocabulary.ttl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<https://paulienlem.github.io/course-knowledge-graphs/data.ttl#me> a vocab:Person ;
+                vocab:name         "Paulien Lemay" ;
+                vocab:studentID    "01000725" ;
+                vocab:email        "paulien.lemay@ugent.be" ;
+                vocab:yearOfStudy  5 ;
+                vocab:interest     "Music" ;
+                vocab:nationality  "Belgian" .

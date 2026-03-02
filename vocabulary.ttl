@@ -1,0 +1,50 @@
+@prefix vocab: <https://paulienlem.github.io/course-knowledge-graphs/vocabulary.ttl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+vocab:Person a rdfs:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A human being." .
+
+vocab:name a rdf:Property ;
+    rdfs:label "name" ;
+    rdfs:comment "The full name of a person." ;
+    rdfs:domain vocab:Person ;
+    rdfs:range xsd:string .
+
+vocab:studentID a rdf:Property ;
+    rdfs:label "student ID" ;
+    rdfs:comment "The student identification number." ;
+    rdfs:domain vocab:Person ;
+    rdfs:range xsd:string .
+
+vocab:email a rdf:Property ;
+    rdfs:label "email" ;
+    rdfs:comment "The email address of a person." ;
+    rdfs:domain vocab:Person ;
+    rdfs:range xsd:string .
+
+vocab:yearOfStudy a rdf:Property ;
+    rdfs:label "year of study" ;
+    rdfs:comment "The current academic year of the student." ;
+    rdfs:domain vocab:Person ;
+    rdfs:range xsd:integer .
+
+vocab:interest a rdf:Property ;
+    rdfs:label "interest" ;
+    rdfs:comment "A topic that a person is interested in." ;
+    rdfs:domain vocab:Person ;
+    rdfs:range xsd:string .
+
+vocab:nationality a rdf:Property ;
+    rdfs:label "nationality" ;
+    rdfs:comment "The nationality of a person." ;
+    rdfs:domain vocab:Person ;
+    rdfs:range xsd:string .
+
+vocab:knows a rdf:Property ;
+    rdfs:label "knows" ;
+    rdfs:comment "Indicates that a person knows another person." ;
+    rdfs:domain vocab:Person ;
+    rdfs:range vocab:Person .
