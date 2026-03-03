@@ -7,4 +7,6 @@
                 vocab:email        "paulien.lemay@ugent.be" ;
                 vocab:yearOfStudy  5 ;
                 vocab:interest     "Music" ;
-                vocab:nationality  "Belgian" .
+                vocab:nationality  "Belgian" ;
+                vocab:knows <https://miboelae.github.io/data.ttl#me> ;
+                vocab:knows <https://arnedierick.github.io/#me> .
