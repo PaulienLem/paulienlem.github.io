@@ -5,7 +5,7 @@
                 vocab:name         "Paulien Lemay" ;
                 vocab:studentID    "01000725" ;
                 vocab:email        "paulien.lemay@ugent.be" ;
-                vocab:yearOfStudy 5^xsd:integer ;
+                vocab:yearOfStudy  "5"^^xsd:integer ;
                 vocab:interest     "Music" ;
                 vocab:nationality  "Belgian" ;
                 vocab:knows <https://miboelae.github.io/data.ttl#me> ;
