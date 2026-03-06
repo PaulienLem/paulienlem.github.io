@@ -9,4 +9,4 @@
                 vocab:interest     "Music" ;
                 vocab:nationality  "Belgian" ;
                 vocab:knows <https://miboelae.github.io/data.ttl#me> ;
-                vocab:knows <https://arnedierick.github.io/#me> .
+                vocab:knows <https://arnedierick.github.io/data.ttl#me> .
