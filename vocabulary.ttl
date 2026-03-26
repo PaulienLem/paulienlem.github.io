@@ -2,10 +2,22 @@
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> . 
 
 vocab:Person a rdfs:Class ;
     rdfs:label "Person" ;
     rdfs:comment "A human being." .
+
+vocab:Photograph a rdfs:Class ;
+    rdfs:label "Photograph" ;
+    rdfs:comment "A photographic image." .
+
+vocab:Place a rdfs:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "A geographic location." .
+
+vocab:Person     rdfs:subClassOf foaf:Person .
+vocab:Photograph rdfs:subClassOf foaf:Image .
 
 vocab:name a rdf:Property ;
     rdfs:label "name" ;
@@ -48,3 +60,53 @@ vocab:knows a rdf:Property ;
     rdfs:comment "Indicates that a person knows another person." ;
     rdfs:domain vocab:Person ;
     rdfs:range vocab:Person .
+
+vocab:title a rdf:Property ;
+    rdfs:label "title" ;
+    rdfs:comment "The title or name of a photograph." ;
+    rdfs:domain vocab:Photograph ;
+    rdfs:range xsd:string .
+
+vocab:photographer a rdf:Property ;
+    rdfs:label "photographer" ;
+    rdfs:comment "The person who took the photograph." ;
+    rdfs:domain vocab:Photograph ;
+    rdfs:range vocab:Person .
+
+vocab:depicts a rdf:Property ;
+    rdfs:label "depicts" ;
+    rdfs:comment "A person depicted in the photograph." ;
+    rdfs:domain vocab:Photograph ;
+    rdfs:range vocab:Person .
+
+vocab:takenAt a rdf:Property ;
+    rdfs:label "taken at" ;
+    rdfs:comment "The place where the photograph was taken." ;
+    rdfs:domain vocab:Photograph ;
+    rdfs:range vocab:Place .
+
+vocab:description a rdf:Property ;
+    rdfs:label "description" ;
+    rdfs:comment "A textual description or summary of the photograph." ;
+    rdfs:domain vocab:Photograph ;
+    rdfs:range xsd:string .
+
+vocab:placeName a rdf:Property ;
+    rdfs:label "place name" ;
+    rdfs:comment "The name of a place." ;
+    rdfs:domain vocab:Place ;
+    rdfs:range xsd:string .
+
+vocab:image a rdf:Property ;
+    rdfs:label "image" ;
+    rdfs:comment "Links to a photograph involving a person." ;
+    rdfs:domain vocab:Person ;
+    rdfs:range vocab:Photograph .
+
+vocab:name        rdfs:subPropertyOf foaf:name .
+vocab:email       rdfs:subPropertyOf foaf:mbox .
+vocab:knows       rdfs:subPropertyOf foaf:knows .
+vocab:interest    rdfs:subPropertyOf foaf:interest .
+vocab:depicts     rdfs:subPropertyOf foaf:depicts .
+vocab:photographer rdfs:subPropertyOf foaf:maker .
+vocab:image       rdfs:subPropertyOf foaf:depiction .

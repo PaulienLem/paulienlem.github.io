@@ -2,11 +2,68 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 <https://paulienlem.github.io/data.ttl#me> a vocab:Person ;
-                vocab:name         "Paulien Lemay" ;
-                vocab:studentID    "01000725" ;
-                vocab:email        "paulien.lemay@ugent.be" ;
-                vocab:yearOfStudy  "5"^^xsd:integer ;
-                vocab:interest     "Music" ;
-                vocab:nationality  "Belgian" ;
-                vocab:knows <https://miboelae.github.io/data.ttl#me> ;
-                vocab:knows <https://arnedierick.github.io/data.ttl#me> .
+    vocab:name         "Paulien Lemay" ;
+    vocab:studentID    "01000725" ;
+    vocab:email        "paulien.lemay@ugent.be" ;
+    vocab:yearOfStudy  "5"^^xsd:integer ;
+    vocab:interest     "Music" ;
+    vocab:nationality  "Belgian" ;
+    vocab:image        <https://research.flw.ugent.be/sites/default/files/styles/profile_picture/public/pictures/picture-316-1771228657.jpg> ;
+    vocab:knows <https://miboelae.github.io/data.ttl#me> ;
+    vocab:knows <https://arnedierick.github.io/data.ttl#me> .
+
+<https://paulienlem.github.io/data.ttl#london> a vocab:Place ;
+    vocab:placeName "London, United Kingdom" .
+
+<https://paulienlem.github.io/data.ttl#sherborne> a vocab:Place ;
+    vocab:placeName "Sherborne, United Kingdom" .
+
+<https://paulienlem.github.io/data.ttl#paris> a vocab:Place ;
+    vocab:placeName "Paris, France" .
+
+<https://paulienlem.github.io/data.ttl#wevelgem> a vocab:Place ;
+    vocab:placeName "Wevelgem, Belgium" .
+    
+<https://research.flw.ugent.be/sites/default/files/styles/profile_picture/public/pictures/picture-316-1771228657.jpg>
+    a vocab:Photograph ;
+    vocab:title        "Paulien Lemay — UGent profile picture" ;
+    vocab:photographer <https://paulienlem.github.io/data.ttl#me> ;
+    vocab:depicts      <https://paulienlem.github.io/data.ttl#me> ;
+    vocab:takenAt      <https://paulienlem.github.io/data.ttl#wevelgem> ;
+    vocab:description  "Profile photograph of Paulien Lemay, used as Ghent University profile picture." .
+
+<https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg>
+    a vocab:Photograph ;
+    vocab:title        "Portrait of Ada Lovelace" ;
+    vocab:photographer <https://paulienlem.github.io/data.ttl#me> ;
+    vocab:depicts      <https://paulienlem.github.io/data.ttl#ada> ;
+    vocab:takenAt      <https://paulienlem.github.io/data.ttl#london> ;
+    vocab:description  "Watercolour portrait of Ada Lovelace." .
+
+<https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg>
+    a vocab:Photograph ;
+    vocab:title        "Alan Turing aged 16" ;
+    vocab:photographer <https://paulienlem.github.io/data.ttl#me> ;
+    vocab:depicts      <https://paulienlem.github.io/data.ttl#turing> ;
+    vocab:takenAt      <https://paulienlem.github.io/data.ttl#sherborne> ;
+    vocab:description  "Portrait photograph of Alan Turing aged 16." .
+
+<https://upload.wikimedia.org/wikipedia/commons/c/c8/Marie_Curie_c._1920s.jpg>
+    a vocab:Photograph ;
+    vocab:title        "Marie Curie in the 1920s" ;
+    vocab:photographer <https://paulienlem.github.io/data.ttl#me> ;
+    vocab:depicts      <https://paulienlem.github.io/data.ttl#curie> ;
+    vocab:takenAt      <https://paulienlem.github.io/data.ttl#paris> ;
+    vocab:description  "Photograph of Marie Curie at the Institut du Radium in Paris, c.1920s." .
+
+<https://paulienlem.github.io/data.ttl#ada> a vocab:Person ;
+    vocab:name        "Ada Lovelace" ;
+    vocab:nationality "British" .
+
+<https://paulienlem.github.io/data.ttl#turing> a vocab:Person ;
+    vocab:name        "Alan Turing" ;
+    vocab:nationality "British" .
+
+<https://paulienlem.github.io/data.ttl#curie> a vocab:Person ;
+    vocab:name        "Marie Curie" ;
+    vocab:nationality "Polish" .
